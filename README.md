@@ -76,3 +76,7 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/tyshonbrown/devNotes.git
+
+## Author
+
+Tyshon Brown
