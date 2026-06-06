@@ -31,13 +31,13 @@ devNotes is a full-stack developer notes app that helps users create, organize, 
 ## Screenshots
 
 ### Landing Page
-![Landing Page](./images/Landing-devNotes.png)
+![Landing Page](./client/images/Landing-devNotes.png)
 
 ### Dashboard
-![Dashboard](./public/images/Dashboard-devNotes.png)
+![Dashboard](./client/public/images/Dashboard-devNotes.png)
 
 ### Account Settings
-![Account Settings](./public/images/Account-devNotes.png)
+![Account Settings](./client/public/images/Account-devNotes.png)
 
 ## Demo
 
