@@ -7,6 +7,7 @@ devNotes is a full-stack developer notes app that helps users create, organize, 
 - User authentication with JWT
 - Create, edit, and delete notes
 - Rich-text editor with formatting tools
+- Create code snippets inside notes
 - Add categories to organize notes
 - Add tags for better filtering
 - Search notes by title, content, category, or tags
