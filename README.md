@@ -28,7 +28,7 @@ devNotes is a full-stack developer notes app that helps users create, organize, 
 - JWT Authentication
 - TipTap Editor
 
-## Screenshots
+## Pages
 
 ### Landing Page
 ![Landing Page](./client/public/images/Landing-devNotes.png)
