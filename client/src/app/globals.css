@@ -1,0 +1,144 @@
+@import "tailwindcss";
+@import "boxicons/css/boxicons.min.css";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.tiptap {
+  min-height: 31.25rem;
+  width: 100%;
+  outline: none;
+}
+
+.tiptap:focus {
+  outline: none;
+}
+
+.tiptap p {
+  margin: 0.75rem 0;
+}
+
+.tiptap h1 {
+  margin: 1rem 0 0.75rem;
+  font-size: 1.75rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+  color: #f3f4f6;
+}
+
+.tiptap h2 {
+  margin: 1rem 0 0.75rem;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.tiptap ul {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.tiptap ol {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+  list-style-type: decimal;
+}
+
+.tiptap li {
+  margin: 0.25rem 0;
+}
+
+.tiptap blockquote {
+  border-left: 3px solid #3b82f6;
+  padding-left: 1rem;
+  color: #d1d5db;
+}
+
+.tiptap a {
+  color: #60a5fa;
+  text-decoration: underline;
+}
+
+.tiptap pre {
+  background: #09090b;
+  color: #e5e7eb;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  overflow-x: auto;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 1rem 0;
+}
+
+.tiptap pre code {
+  background: transparent;
+  font-family: "Courier New", monospace;
+  padding: 0;
+}
+
+/* Syntax highlighting tokens from lowlight / highlight.js */
+.tiptap pre .hljs-comment,
+.tiptap pre .hljs-quote {
+  color: #71717a;
+}
+
+.tiptap pre .hljs-keyword,
+.tiptap pre .hljs-selector-tag,
+.tiptap pre .hljs-literal {
+  color: #c084fc;
+}
+
+.tiptap pre .hljs-string,
+.tiptap pre .hljs-title,
+.tiptap pre .hljs-name {
+  color: #86efac;
+}
+
+.tiptap pre .hljs-number,
+.tiptap pre .hljs-symbol,
+.tiptap pre .hljs-bullet {
+  color: #fbbf24;
+}
+
+.tiptap pre .hljs-function,
+.tiptap pre .hljs-title.function_ {
+  color: #93c5fd;
+}
+
+.tiptap pre .hljs-variable,
+.tiptap pre .hljs-template-variable,
+.tiptap pre .hljs-attr,
+.tiptap pre .hljs-attribute {
+  color: #fca5a5;
+}
+
+.tiptap pre .hljs-built_in,
+.tiptap pre .hljs-type,
+.tiptap pre .hljs-class {
+  color: #67e8f9;
+}
