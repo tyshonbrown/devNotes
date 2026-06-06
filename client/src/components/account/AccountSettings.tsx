@@ -77,7 +77,7 @@ const AccountSettings = ({
   };
 
   return (
-    <section className="min-h-[calc(100vh-88px)] flex-1 rounded-3xl bg-black p-12">
+    <section className="min-h-0 flex-1 overflow-y-auto rounded-3xl bg-black p-12">
       <div className="mx-auto max-w-3xl">
         {/* Back to Editor */}
         <button
