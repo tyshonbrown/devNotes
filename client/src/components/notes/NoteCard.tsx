@@ -77,7 +77,7 @@ const NoteCard = ({ note, isSelected, onClick }: NoteCardProps) => {
   const lastUpdated = formatLastUpdated(note.updatedAt || note.createdAt);
 
   // Preview Text function, takes in html and preview shows up to 120 characters
-  const getPlainTextPreview = (html: string, maxLength = 120) => {
+  const getTextPreview = (html: string, maxLength = 120) => {
     // Check if there is content
     if (!html) return "No content";
 
@@ -144,7 +144,7 @@ const NoteCard = ({ note, isSelected, onClick }: NoteCardProps) => {
           isSelected ? "text-blue-100/70" : "text-gray-500"
         }`}
       >
-        {getPlainTextPreview(note.content)}
+        {getTextPreview(note.content)}
       </p>
     </button>
   );
