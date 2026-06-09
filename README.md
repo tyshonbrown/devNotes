@@ -32,12 +32,15 @@ devNotes is a full-stack developer notes app that helps users create, organize, 
 ## Pages
 
 ### Landing Page
+
 ![Landing Page](./client/public/images/Landing-devNotes.png)
 
 ### Dashboard
+
 ![Dashboard](./client/public/images/Dashboard-devNotes.png)
 
 ### Account Settings
+
 ![Account Settings](./client/public/images/Account-devNotes.png)
 
 ## Demo
@@ -69,7 +72,6 @@ While building devNotes, I practiced:
 
 devNotes will be available here once deployed:
 
-
 ## Installation
 
 Clone the repository:
@@ -80,3 +82,4 @@ git clone https://github.com/tyshonbrown/devNotes.git
 ## Author
 
 Tyshon Brown
+```
