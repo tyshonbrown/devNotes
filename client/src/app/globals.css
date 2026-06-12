@@ -26,20 +26,24 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* MAIN TipTap editor area */
 .tiptap {
   min-height: 31.25rem;
   width: 100%;
   outline: none;
 }
 
+/* Remove outline when editor is focused */
 .tiptap:focus {
   outline: none;
 }
 
+/* Paragraph extra spacing between blocks */
 .tiptap p {
   margin: 0.75rem 0;
 }
 
+/* Header styles inside the editor */
 .tiptap h1 {
   margin: 1rem 0 0.75rem;
   font-size: 1.75rem;
@@ -68,6 +72,7 @@ body {
   list-style-type: decimal;
 }
 
+/* Spacing between list items */
 .tiptap li {
   margin: 0.25rem 0;
 }
@@ -78,6 +83,7 @@ body {
   color: #d1d5db;
 }
 
+/* Link styling */
 .tiptap a {
   color: #60a5fa;
   text-decoration: underline;
@@ -102,34 +108,41 @@ body {
 }
 
 /* Syntax highlighting tokens from lowlight / highlight.js */
+
+/* Color for COMMENTS and QUOTES in code blocks */
 .tiptap pre .hljs-comment,
 .tiptap pre .hljs-quote {
   color: #71717a;
 }
 
+/* Color for KEYWORDS, SELECTOR TAGS, and LITERALS */
 .tiptap pre .hljs-keyword,
 .tiptap pre .hljs-selector-tag,
 .tiptap pre .hljs-literal {
   color: #c084fc;
 }
 
+/* Color for STRINGS, TITLES, and NAMES */
 .tiptap pre .hljs-string,
 .tiptap pre .hljs-title,
 .tiptap pre .hljs-name {
   color: #86efac;
 }
 
+/* Color for numbers, symbols, and bullets */
 .tiptap pre .hljs-number,
 .tiptap pre .hljs-symbol,
 .tiptap pre .hljs-bullet {
   color: #fbbf24;
 }
 
+/* Color for function names */
 .tiptap pre .hljs-function,
 .tiptap pre .hljs-title.function_ {
   color: #93c5fd;
 }
 
+/* Color for variables, attributes, and template variables */
 .tiptap pre .hljs-variable,
 .tiptap pre .hljs-template-variable,
 .tiptap pre .hljs-attr,
@@ -137,6 +150,7 @@ body {
   color: #fca5a5;
 }
 
+/* Color for built-in values, types, and classes */
 .tiptap pre .hljs-built_in,
 .tiptap pre .hljs-type,
 .tiptap pre .hljs-class {
