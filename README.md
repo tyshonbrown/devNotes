@@ -22,7 +22,7 @@ devNotes is a full-stack developer notes app that helps users create, organize, 
 - Next.js
 - TypeScript
 - Tailwind CSS
-- CSS
+- Custom CSS for TipTap editor styling
 - Node.js
 - Express
 - MongoDB
@@ -47,6 +47,19 @@ devNotes is a full-stack developer notes app that helps users create, organize, 
 ## Demo
 
 devNotes allows users to create an account, sign in, and manage their own personal developer notes. Each user has their own notes, categories, tags, and account settings.
+
+## Backend Overview
+
+The backend uses Node.js, Express, MongoDB, and Mongoose to handle authentication, notes, categories, and user account updates.
+
+Main backend features include:
+
+- JWT-based signup and login
+- Protected routes for user-specific data
+- CRUD operations for notes
+- Category creation and management
+- User account updates for username, email, password, and avatar
+- MongoDB models for users, notes, and categories
 
 ## What I Learned
 
