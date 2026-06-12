@@ -22,6 +22,7 @@ devNotes is a full-stack developer notes app that helps users create, organize, 
 - Next.js
 - TypeScript
 - Tailwind CSS
+- CSS
 - Node.js
 - Express
 - MongoDB
@@ -78,8 +79,4 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/tyshonbrown/devNotes.git
-
-## Author
-
-Tyshon Brown
 ```
