@@ -44,10 +44,6 @@ devNotes is a full-stack developer notes app that helps users create, organize, 
 
 ![Account Settings](./client/public/images/Account-devNotes.png)
 
-## Demo
-
-devNotes allows users to create an account, sign in, and manage their own personal developer notes. Each user has their own notes, categories, tags, and account settings.
-
 ## Backend Overview
 
 The backend uses Node.js, Express, MongoDB, and Mongoose to handle authentication, notes, categories, and user account updates.
