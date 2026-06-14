@@ -57,19 +57,6 @@ const noteSchema = new mongoose.Schema(
       default: "",
     },
 
-    // Optional code snippet attached to the note
-    codeSnippet: {
-      type: String,
-      default: "",
-    },
-
-    // Programming language for the code snippet
-    language: {
-      type: String,
-      default: "javascript",
-      trim: true,
-    },
-
     // Pinned notes will appear at the top of the sidebar
     isPinned: {
       type: Boolean,

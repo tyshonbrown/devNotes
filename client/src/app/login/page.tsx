@@ -161,7 +161,7 @@ const Login = () => {
               <div className="mt-8">
                 <button
                   type="submit"
-                  className="w-full rounded-lg bg-blue-600 px-4 py-3 text-base font-semibold text-white transition hover:bg-blue-500"
+                  className="w-full rounded-lg bg-blue-600 px-4 py-3 text-base font-semibold text-white transition hover:bg-blue-500 cursor-pointer"
                 >
                   Login
                 </button>

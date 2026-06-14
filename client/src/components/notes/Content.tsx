@@ -633,6 +633,7 @@ const Content = ({ value, onChange, onClick, tips, setTips }: ContentProps) => {
 
       {/* Renders editable content area using the editor instance */}
       <EditorContent
+        onClick={() => setOpenMenu(null)}
         editor={editor}
         className="w-full rounded-2xl bg-transparent pt-4"
       />
@@ -644,7 +645,7 @@ const Content = ({ value, onChange, onClick, tips, setTips }: ContentProps) => {
           className="mb-2 border-t border-white/10 pt-4 space-y-3"
         >
           <h3 className="text-md font-semibold uppercase tracking-wide text-yellow-200/80">
-            Debugging Tips
+            Tips
           </h3>
 
           {/* Render each tip as a controlled text area ties to the tips array */}
@@ -663,7 +664,7 @@ const Content = ({ value, onChange, onClick, tips, setTips }: ContentProps) => {
                 }}
                 onInput={(e) => autoResizeTextarea(e.currentTarget)}
                 rows={1}
-                placeholder="Write a debugging tip..."
+                placeholder="Write a tip..."
                 className="min-h-8 w-full resize-none overflow-hidden bg-transparent pt-1 font-normal leading-6 outline-none placeholder:text-yellow-100/40"
               />
 

@@ -1,6 +1,9 @@
 import User from "../models/User.js";
+import Note from "../models/Note.js";
+import Category from "../models/Category.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
+import crypto from "crypto";
 
 // Create JWT token
 const generateToken = (id) => {
@@ -80,6 +83,65 @@ export const signupUser = async (req, res) => {
       username: trimmedUsername,
       email: cleanEmail,
       password: hashedPassword,
+    });
+
+    // Default category for the new user
+    const defaultCategory = await Category.create({
+      user: user._id,
+      name: "Getting Started",
+    });
+
+    // Default Welcome note for new user
+    await Note.create({
+      user: user._id,
+      title: "Welcome to devNotes",
+      category: defaultCategory._id,
+      tags: ["welcome", "features", "devnotes"],
+      tips: [
+        {
+          id: crypto.randomUUID(),
+          text: "Use pinned notes to keep important notes at the top of your dashboard",
+        },
+        {
+          id: crypto.randomUUID(),
+          text: "Use categories and tags together to organize your coding notes better",
+        },
+      ],
+      content: `
+      <h2><span style="color: rgb(255, 255, 255);">Welcome to devNotes 👋</span></h2>
+
+    <p><span style="color: rgb(255, 255, 255);">
+      devNotes helps you create, organize, and manage your coding notes in one clean workspace.
+    </span></p>
+
+    <h3><span style="color: rgb(255, 255, 255);">What you can do</span></h3>
+
+    <ul>
+      <li><span style="color: rgb(255, 255, 255);">Create, edit, and delete notes</span></li>
+      <li><span style="color: rgb(255, 255, 255);">Format notes with headings, bold text, lists, colors, links, and more</span></li>
+      <li><span style="color: rgb(255, 255, 255);">Add code blocks for programming examples</span></li>
+      <li><span style="color: rgb(255, 255, 255);">Organize notes with categories and tags</span></li>
+      <li><span style="color: rgb(255, 255, 255);">Pin important notes to keep them easy to find</span></li>
+      <li><span style="color: rgb(255, 255, 255);">Search notes by title, content, category, or tags</span></li>
+      <li><span style="color: rgb(255, 255, 255);">Add tips for common coding problems</span></li>
+    </ul>
+
+    <h3><span style="color: rgb(255, 255, 255);">Example Code Block</span></h3>
+
+    <pre><code class="language-javascript">const note = {
+  title: "My First Note",
+  category: "JavaScript",
+  tags: ["arrays", "functions"],
+};
+
+console.log(note.title);</code></pre>
+
+    <p><span style="color: rgb(255, 255, 255);">
+      Start by editing this note or creating a new using the New Note button at the top of the sidebar.
+    </span></p>
+    `,
+      isPinned: true,
+      lastViewedAt: null,
     });
 
     res.status(201).json({

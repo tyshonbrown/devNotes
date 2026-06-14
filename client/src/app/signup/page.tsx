@@ -223,12 +223,19 @@ const Signup = () => {
               <div className="mt-8">
                 <button
                   type="submit"
-                  className="w-full rounded-lg bg-blue-600 px-4 py-3 text-base font-semibold text-white transition hover:bg-blue-500"
+                  className="w-full rounded-lg bg-blue-600 px-4 py-3 text-base font-semibold text-white transition hover:bg-blue-500 cursor-pointer"
                 >
                   Create Account
                 </button>
               </div>
             </form>
+
+            <div className="flex flex-row gap-2 mt-2">
+              <p className="text-black">Already have an account? </p>
+              <Link href="/login" className="text-blue-500 hover:underline">
+                Login
+              </Link>
+            </div>
           </div>
         </div>
       </div>
