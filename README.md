@@ -80,7 +80,9 @@ While building devNotes, I practiced:
 
 ## Live Demo
 
-devNotes will be available here once deployed:
+Visit devNotes here:
+
+[View Live Site](https://dev-notes-chi-nine.vercel.app/)
 
 ## Installation
 
