@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { ChangeEventHandler, SubmitEventHandler } from "react";
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
 // USER types
 type User = {
   _id: string;
@@ -47,7 +49,7 @@ const ProfileForm = ({ user, onUserUpdated, onClose }: ProfileFormProps) => {
 
       // Verify token and Update username
       const usernameRes = await fetch(
-        "http://localhost:5050/api/auth/username",
+        `${API_URL}/auth/username`,
         {
           method: "PUT",
           headers: {
@@ -66,7 +68,7 @@ const ProfileForm = ({ user, onUserUpdated, onClose }: ProfileFormProps) => {
       }
 
       // Update email
-      const emailRes = await fetch("http://localhost:5050/api/auth/email", {
+      const emailRes = await fetch(`${API_URL}/auth/email`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

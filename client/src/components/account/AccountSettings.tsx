@@ -30,6 +30,8 @@ const AccountSettings = ({
   const [showChangePassword, setShowChangePassword] = useState(false);
   const [popupMessage, setPopupMessage] = useState("");
 
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
   // Update Avatar
   const handleAvatarChange = async (avatar: string) => {
     // Get token from local storage
@@ -38,7 +40,7 @@ const AccountSettings = ({
 
     try {
       // Verify token and update avatar
-      const res = await fetch("http://localhost:5050/api/users/avatar", {
+      const res = await fetch(`${API_URL}/users/avatar`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

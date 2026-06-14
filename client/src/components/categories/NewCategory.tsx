@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { ChangeEventHandler, SubmitEventHandler } from "react";
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
 type Note = {
   _id: string;
   title: string;
@@ -52,7 +54,7 @@ const NewCategory = ({ onClose, onCategoryCreated }: NewCategoryProps) => {
       const token = sessionStorage.getItem("token");
 
       // Create the category with token verification
-      const res = await fetch("http://localhost:5050/api/categories", {
+      const res = await fetch(`${API_URL}/categories`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -7,6 +7,8 @@ import AccountSettings from "@/components/account/AccountSettings";
 import { useEffect, useState, useCallback } from "react";
 import { avatars } from "@/data/avatars";
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
 type Tip = {
   id: string;
   text: string;
@@ -58,7 +60,7 @@ const Dashboard = () => {
 
     try {
       // Verify token and get user data
-      const res = await fetch("http://localhost:5050/api/users/me", {
+      const res = await fetch(`${API_URL}/users/me`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -88,7 +90,7 @@ const Dashboard = () => {
       const token = sessionStorage.getItem("token");
 
       // Get notes and store data
-      const res = await fetch("http://localhost:5050/api/notes", {
+      const res = await fetch(`${API_URL}/notes`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -126,7 +128,7 @@ const Dashboard = () => {
       const token = sessionStorage.getItem("token");
 
       // Get categorues and store data
-      const res = await fetch("http://localhost:5050/api/categories", {
+      const res = await fetch(`${API_URL}/categories`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -175,7 +177,7 @@ const Dashboard = () => {
     try {
       // Get token, verify it, and create note upon verification
       const token = sessionStorage.getItem("token");
-      const res = await fetch("http://localhost:5050/api/notes", {
+      const res = await fetch(`${API_URL}/notes`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

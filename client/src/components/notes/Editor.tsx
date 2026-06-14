@@ -3,6 +3,8 @@ import { ChangeEventHandler, KeyboardEventHandler } from "react";
 import NewCategory from "../categories/NewCategory";
 import Content from "./Content";
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
 // NOTE types
 type Note = {
   _id: string;
@@ -109,7 +111,7 @@ const Editor = ({
         setSaveStatus("saving");
 
         // Verify the token and update the note based on the form note data
-        const res = await fetch(`http://localhost:5050/api/notes/${noteId}`, {
+        const res = await fetch(`${API_URL}/notes/${noteId}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -206,7 +208,7 @@ const Editor = ({
       // Get and verify token, then toggle pin
       const token = sessionStorage.getItem("token");
       const res = await fetch(
-        `http://localhost:5050/api/notes/${note._id}/pin`,
+        `${API_URL}/notes/${note._id}/pin`,
         {
           method: "PATCH",
           headers: {
@@ -251,7 +253,7 @@ const Editor = ({
 
     try {
       // Verify token and delete the note
-      const res = await fetch(`http://localhost:5050/api/notes/${note._id}`, {
+      const res = await fetch(`${API_URL}/notes/${note._id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,

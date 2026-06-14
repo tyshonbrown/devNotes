@@ -6,6 +6,8 @@ import Link from "next/link";
 import type { SubmitEventHandler, ChangeEventHandler } from "react";
 import { useRouter } from "next/navigation";
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
 const Signup = () => {
   const router = useRouter();
   const [error, setError] = useState("");
@@ -47,7 +49,7 @@ const Signup = () => {
 
     try {
       // Send form to backend signup controller
-      const res = await fetch("http://localhost:5050/api/auth/signup", {
+      const res = await fetch(`${API_URL}/auth/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

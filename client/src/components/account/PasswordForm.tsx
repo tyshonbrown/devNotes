@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { ChangeEventHandler, SubmitEventHandler } from "react";
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
 // USER types
 type User = {
   _id: string;
@@ -51,7 +53,7 @@ const PasswordForm = ({ user, onClose, onSuccess }: PasswordFormProps) => {
       }
 
       // Verify token and update password
-      const res = await fetch("http://localhost:5050/api/auth/password", {
+      const res = await fetch(`${API_URL}/auth/password`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
